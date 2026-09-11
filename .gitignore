@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Node dependencies and build outputs
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Testing & cache
+.pytest_cache/
+*.log
+
+# Datasets (reproducible via python run_pipeline.py / kagglehub)
+data/processed/*.jsonl
+data/raw/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model weights & indices (reproducible via scripts)
+models/**/*.joblib
+models/**/*.npy
+models/**/*.json
+models/*.joblib
+!models/**/.gitkeep
+!models/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db
