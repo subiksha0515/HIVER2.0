@@ -35,7 +35,8 @@ export default function DecisionPanel({ decision, reason, stage }) {
           background: 'rgba(0,0,0,0.3)',
           color: '#ffffff'
         }}>
-          STAGE: {stage || 'COMPLETED'}\n        </span>
+          STAGE: {stage || 'COMPLETED'}
+        </span>
       </div>
     </div>
   );

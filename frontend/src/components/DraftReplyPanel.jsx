@@ -18,7 +18,8 @@ export default function DraftReplyPanel({ draftReply, isEscalated, evidence }) {
           <span>💬</span>
           <span>AI Draft Response</span>
         </div>
-        {!isEscalated && draftReply && (\n          <button 
+        {!isEscalated && draftReply && (
+          <button 
             onClick={handleCopy}
             style={{
               background: 'rgba(255, 255, 255, 0.06)',

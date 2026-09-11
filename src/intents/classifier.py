@@ -213,7 +213,8 @@ class EmbeddingKNNClassifier(BaseIntentClassifier):
         sims = cosine_similarity(dense_embeds, centroid_matrix)
 
         results = []
-        for i in range(len(texts)):\n            row_sims = sims[i]
+        for i in range(len(texts)):
+            row_sims = sims[i]
             best_idx = int(np.argmax(row_sims))
             raw_intent = self.classes_[best_idx]
             conf = float(row_sims[best_idx])

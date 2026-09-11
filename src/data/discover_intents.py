@@ -86,7 +86,8 @@ def classify_intent_heuristic(message: str) -> Tuple[str, float]:
     
     for intent, cfg in INTENT_PATTERNS.items():
         score = 0
-        for pattern in cfg['keywords']:\n            if re.search(pattern, msg_lower):
+        for pattern in cfg['keywords']:
+            if re.search(pattern, msg_lower):
                 score += 1
         if score > 0:
             matched_intents.append((intent, score))
@@ -202,8 +203,7 @@ def save_intent_config_and_report(
 - **Description**: {info['description']}
 - **Inclusion Criteria**: {info['inclusion_criteria']}
 - **Exclusion Criteria**: {info['exclusion_criteria']}
-- **Sample Count**: {info['sample_count']:,}
-- **Representative Customer Examples**:
+- **Sample Count**: {info['sample_count']:,}\n- **Representative Customer Examples**:
 """
         for ex in info['representative_examples']:
             report_md += f"  - *\"{ex}\"*\n"

@@ -96,7 +96,8 @@ export default function Analyze() {
             <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginRight: 4 }}>
               Presets:
             </span>
-            {SAMPLE_QUERIES.map((s, idx) => (\n              <button
+            {SAMPLE_QUERIES.map((s, idx) => (
+              <button
                 key={idx}
                 type="button"
                 className="sample-chip"
